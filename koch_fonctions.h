@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 #include "create_image.h"
 
 /* Liste chainee pour stocker les points de la fractale de Koch */

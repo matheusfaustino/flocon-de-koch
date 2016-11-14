@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     init_parameters(params, argc, argv);
     show_parameters(params);
 
-    // @todo ver essa cte 2.5. Formula da circunferencia de um triangulo
+    // la formule de la circonférence du triangle
     image_size = (sqrt(3.0)/3.0 * params->segment_length) * 2.5;
 
     init_koch(&points, image_size, params->segment_length);
@@ -49,8 +49,6 @@ int main(int argc, char **argv)
         create_image_ppm(picture, image_size, image_size, params->outfile);
         free(picture);
     }
-
-    // show_koch_list(points);
 
     free(params);
     free_koch(points);

@@ -24,15 +24,14 @@ void create_image_ppm(uint32_t *pic, int32_t size_x, int32_t size_y, char *filen
 
     FILE *file = fopen(filename, "wb");
     if (file == NULL) {
-        printf("Erro ao abrir o arquivo\n");
-         // fprintf(stderr, "Error opening file: %s\n", strerror(errno));
+        fprintf(stderr, "Erreur lors de l'ouverture du fichier: %s\n", strerror(errno));
     }
 
     // normalize
     size_x--;
     size_y--;
 
-    // Header PPM
+    // entête PPM
     fprintf(file, "%s \n%d %d \n%d \n", MAGIC_NUMBER, size_x, size_y, MAX_COULEUR);
 
     for (int32_t col = 0; col < size_y; col++) {
