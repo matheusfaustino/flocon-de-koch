@@ -96,7 +96,7 @@ void line(uint32_t *picture, uint32_t size, uint32_t fg_color, uint32_t x1, uint
         if (x1 == x2 && y1 == y2)
             break;
 
-        e2 = 2 * err;
+        e2 = err;
         if (e2 > -dx) {
             err -= dy;
             x1 += sx;

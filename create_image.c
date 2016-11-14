@@ -24,7 +24,7 @@ void create_image_ppm(uint32_t *pic, int32_t size_x, int32_t size_y, char *filen
 
     FILE *file = fopen(filename, "wb");
     if (file == NULL) {
-        fprintf(stderr, "Erreur lors de l'ouverture du fichier: %s\n", strerror(errno));
+        printf("Erreur lors de l'ouverture du fichier\n");
     }
 
     // normalize
